@@ -17,7 +17,8 @@ body{
 	position:absolute;
 	top:50%;
 	left:50%;
-	margin:auto;
+	margin-top: 50px;
+	margin-left: 100px;
 }
 
 .flipbook-viewport .flipbook{

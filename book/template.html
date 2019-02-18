@@ -7,7 +7,7 @@
     <title>Writing</title>
     <script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
     <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
-    <link href="css/editing.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
 </head>
 <body>
      <!--navbar -->
@@ -21,7 +21,7 @@
                <li><a href="#">Profile</a></li>
             </ul>
         </div>
-      </div>
+    </div>
 
     <!--book -->
     <div class="flipbook-viewport">
@@ -49,15 +49,15 @@
     function loadApp() {
     
       // Create the flipbook
-    
+     
       $('.flipbook').turn({
           // Width
     
-          width:922,
+          width:800,
           
           // Height
     
-          height:600,
+          height:500,
     
           // Elevation
     
@@ -85,5 +85,60 @@
     });
     
     </script>
+
+   <form id="form1" name="form1" method="post" action="index.html">
+   <input name="submit" type="image" value="ee" src="img/template1.png" />
+   </form>
+
+   <!-- 打开弹窗按钮 -->
+   <button id="myBtn"><a>Create a book</a></button>
+
+   <!-- 弹窗 -->
+   <div id="myModal" class="modal">
+
+   <!-- 弹窗内容 -->
+	   <div class="modal-content">
+	     <div class="modal-header">
+	       <span class="close">&times;</span>
+	       <h2>弹窗头部</h2>
+	     </div>
+	     <div class="modal-body">
+	       <p>弹窗文本...</p>
+	       <p>弹窗文本...</p>
+	     </div>
+	    <div class="modal-footer">
+	      <h3>弹窗底部</h3>
+	    </div>
+	   </div>
+  </div>
+  
+  <script type="text/javascript">
+    // 获取弹窗
+    var modal = document.getElementById('myModal');
+
+   // 打开弹窗的按钮对象
+    var btn = document.getElementById("myBtn");
+
+  // 获取 <span> 元素，用于关闭弹窗 that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+  // 点击按钮打开弹窗
+    btn.onclick = function() {
+    modal.style.display = "block";
+    }
+
+   // 点击 <span> (x), 关闭弹窗
+    span.onclick = function() {
+    modal.style.display = "none";
+   }
+
+   // 在用户点击其他地方时，关闭弹窗
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+  </script>
+  
 </body>
 </html>
